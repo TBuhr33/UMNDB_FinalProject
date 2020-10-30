@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Can the Computer Recognize Your Emotion??</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          <!-- emply col to move over text -->
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" href="predict_initial.html" style="color: orangered;  ">
+          <span class="nav-color"><b>Can the Computer Recognize Your Emotion??</b></span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
+          <li><a href="code_walk_through.html">Code Walk Through</a></li>
+        </ul>    
+      </div>        
+    </div>
+  </nav>
+</head>
+<body>
+  <div class="outer-border"> 
+    <div class="scroll">
+      <div class='row'>
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <h2 class="title">Emotion Recognition and Prediction</h2><hr>
+        </div>
+      </div>
+      <br>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+              <p style="text-align: justify;">When you are ready to record your voice  
+              <a class="btn btn-primary btn-sm" href="/record" role="button">Record Voice</a></p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+              <p>To hear your voice recording   
+              <a class="btn btn-primary btn-sm" href="/playback" role="button">Play Voice</a> </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+              <p>To Predict your emotion      
+              <a class="btn btn-primary btn-sm" href="/predict" role="button">Emotion Recognition</a> </p>
+            </div>
+          </div>
+          <p style="color: brown; font-size: smaller;"><br>  
+            *To re-record your voice, click Record Voice above. <br>
+            **Clicking 'Record Voice' or 'Play Voice' requires user to click 'Emotion Recognition' again to return 'Gender' and 'Emotion'  </p>
+          <hr>
+<!-- To be displayed when Emotion Recognition button is clicked -->        
+    </div> 
+  </div> 
+</body>
+<br><br><br><br><br><br>
+<footer>
+  <div class="w3-container">
+    <p> &copy; Copyright UofM Data Bootcamp 2020 <br> &copy; Copyright 2018 Mitesh Puthran, for details check <a href="https://github.com/MITESHPUTHRANNEU/Speech-Emotion-Analyzer/blob/master/LICENSE" target="_blank"> License</a><br>
+    Parselmouth is released under the GNU General Public License, for details check <a href ="https://github.com/YannickJadoul/Parselmouth/blob/master/LICENSE" target="_blank"> License</a><br>
+    <a style="color: red; font-size: small;">This website records your voice.</a></p>
+  </div>
+</footer>
+</html>

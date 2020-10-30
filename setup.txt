@@ -1,0 +1,13 @@
+conda create --name may
+conda activate may
+conda install keras tensorflow jupyter python=3.6 numpy pandas
+pip install sklearn
+conda install keras
+pip install librosa
+conda install -c numba numba
+pip install matplotlib
+pip install praat-parselmouth
+pip install seaborn
+conda install -c conda-forge python-sounddevice
+pip install scipy
+pip install flask

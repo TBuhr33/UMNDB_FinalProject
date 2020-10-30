@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Can the Computer Recognize Your Emotion??</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <!-- emply col to move over text -->
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <a class="navbar-brand" href="predict_initial.html" style="color: orangered; ">
+            <span class="nav-color"><b>Can the Computer Recognize Your Emotion??</b></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>
+            <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
+            <li><a href="code_walk_through.html">Code Walk Through</a></li>
+          </ul>    
+        </div>        
+      </div>
+    </nav>
+  </head>
+  <body>
+    <div class="outer-border"> 
+      <div class="scroll">
+            <div class="row">
+              <div class="col-md-11">
+                <h4 style="color: rgb(4, 0, 255)">Team Members</h4>
+                <p class="text-dark">Satish Nirankari, Thiripurasundari Kannappan, and Tyler Buhr</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h4 style="color: rgb(4, 0, 255)">Project Inspiration</h4>
+                <p>Technology giants such as Microsoft, Apple, and Amazon, plus specialized companies like Kairos and Affectiva are betting big on AI and computers to recognize human emotion. Some estimates indicate these technologies may become a <a href="https://www.technologyreview.com/2019/07/26/238782/emotion-recognition-technology-artifical-intelligence-inaccurate-psychology/" target="_blank">~$25 billion business by 2023</a>. But how and why will these technologies be used, and as always, is it ethical?</p>
+                <p>As humans and computers become more and more intertwined both in the workplace and at home, researchers and companies alike are attempting to harness the power of machine learning to recognize human emotion.  This has applications in marketing as emotion plays a large role in consumer behaviors/decisions, in AI/robotics to make robots more responsive and life-like, or even in our own cars to help prevent dangerous driving caused by emotional distress.  This is just a small subset of possible applications that computer recognition of emotion can have in our world.  </p>
+                <p>Of course, with many of these emerging technologies, the ethics of utilizing them and their associated acquired data is a major point of controversy.  How do we control what companies or apps can utilize these features? Should computers even be able/allowed to use our emotions or collect data on them? How do we ensure consumer privacy? As with many of these developments, legislation or control over their use may not materialize until after it has already been deployed.</p>
+                <p>Considering the immense potential impact of these emotion recognition technologies, we wanted to create a site that uses a model trained with machine learning libraries to recognize an individual's emotions from a voice audio sample.  </p>
+                <ul>
+                  <li>Libraries Utilized: <a href="https://librosa.github.io/librosa/install.html" target="_blank">Librosa</a>, <a href="https://www.tensorflow.org/install/pip#windows" target="_blank">TensorFlow</a>, and <a href="https://parselmouth.readthedocs.io/en/stable/#" target="_blank">Parselmouth</a></li>
+                  <li>Visualizations: Waveplots and Spectrograms.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    <br><br>
+  </body>
+  <footer>
+    <div class="w3-container">
+      <p> &copy; Copyright UofM Data Bootcamp 2020 <br> &copy; Copyright 2018 Mitesh Puthran, for details check <a href="https://github.com/MITESHPUTHRANNEU/Speech-Emotion-Analyzer/blob/master/LICENSE" target="_blank"> License</a><br>
+      Parselmouth is released under the GNU General Public License, for details check <a href ="https://github.com/YannickJadoul/Parselmouth/blob/master/LICENSE" target="_blank"> License</a><br>
+      <a style="color: red; font-size: small;">This website records your voice.</a></p>
+    </div>
+  </footer>
+</html>

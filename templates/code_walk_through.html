@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Can the Computer Recognize Your Emotion??</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <!-- emply col to move over text -->
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <a class="navbar-brand" href="predict_initial.html" style="color: orangered; ">
+            <span class="nav-color"><b>Can the Computer Recognize Your Emotion??</b></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>
+            <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
+            <li><a href="code_walk_through.html">Code Walk Through</a></li>
+          </ul>    
+        </div>        
+      </div>
+    </nav>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         <h3 style="text-align:center; font-weight:bold">Source Data Details</h3>
+         <p>Data Used: We got audio datasets with around 1500 audio files which were in the wav format from the website: http://neuron.arts.ryerson.ca/ravdess/?f=3
+          The website contains speech data which is available in three different format.
+          <ol>
+            <li>Audio Visual – Video with speech</li>
+            <li>Speech – Audio only</li>
+            <li>Visual – Video only</li>
+          </ol>
+          We went with the Audio only zip file because we are dealing with finding emotions from speech.
+          <br>
+          </p>
+          <img src="../static/images/read_wave.png" alt="" width="100%" height="50%">
+      </div>
+      <div class="col-md-12">
+        <h3 style="text-align:center; font-weight:bold">Labeling Data</h3>
+        <p>The next step involves organizing the audio files. Each audio file has a unique identifier at the 6th position of the file name which can be used to determine the emotion the audio file consists. We have 5 different emotions in our dataset.  </p>
+          <ol>
+            <li>Calm</li>
+            <li>Happy</li>
+            <li>Sad</li>
+            <li>Angry</li>
+            <li>Fearful</li>
+          </ol>
+          <img src="../static/images/label_setup.png" alt="" width="100%" height="50%">
+      </div>
+      <div class="col-md-12">
+        <h3 style="text-align:center; font-weight:bold">Feature Extraction</h3>
+        <p>We used Librosa library in Python to process and extract features from the audio files</p>
+        <img src="../static/images/feature_extraction.png" alt="" width="100%" height="50%">
+      </div>
+      <div class="col-md-12">
+        <h3 style="text-align:center; font-weight:bold">Convolutional Neural Network</h3>
+        <p>We used 13 layers having 1D convolutional layer with activation functions such as Relu and Softmax. We used Dropout of 0.1 and 216/128 filters(epochs)</p>
+        <img src="../static/images/CNN_Model.png" alt="" width="100%" height="50%">
+      </div>
+      <div class="col-md-12">
+        <h3 style="text-align:center; font-weight:bold">Splitting Data and Finding Accuracy</h3>
+        <p>We split the data in 80-20 manner as train and test. Train Data was used for training the model and testing data is used for finding the accuracy of the model</p>
+        <img src="../static/images/test_train_split.png" alt="" width="100%" height="50%">
+        <br>
+        <br>
+        <p>Below graph shows the loss graph for both train and test Data. We got 93% accuracy and 29% of loss while Traing the model</p>
+        <img src="../static/images/test_to_model.png" alt="" width="100%" height="50%">
+        <br>
+        <br>
+        <p>When we passed the data to train Model , we got 46% accuracy.</p>
+        <img src="../static/images/accuracy_model.png" alt="" width="100%" height="50%">
+      </div>
+      <div class="col-md-12">
+        <h3 style="text-align:center; font-weight:bold">Observation on Test Data</h3>
+        <p>Below are the Observations on test data </p>
+      
+          <b>Top three emotion Correctly recognised</b>
+            <ol>
+              <li>Male Angry: 84%</li>
+              <li>Female Happy: 79%</li>
+              <li>Female Calm: 73%</li>
+            </ol>
+            <b>Top three emotion Inorrectly recognised</b>
+            <ol>
+              <li>Male Calm: 76%</li>
+              <li>Female Sad: 76%</li>
+              <li>Female Fearful: 71%</li>
+            </ol>
+            <br>
+            <b>DataFrame Representation</b>
+            <img src="../static/images/result_set.png" alt="" width="100%" height="50%">
+            <br>
+            <br>
+            <b>Stack Bar Representation</b>
+            <img src="../static/images/final_prediction.png" alt="" width="100%" height="50%">
+      </div>
+    </div>
+    </div>
+  </body>
+  <footer>
+    <div class="w3-container">
+      <p> &copy; Copyright UofM Data Bootcamp 2020 <br> &copy; Copyright 2018 Mitesh Puthran, for details check <a href="https://github.com/MITESHPUTHRANNEU/Speech-Emotion-Analyzer/blob/master/LICENSE" target="_blank"> License</a><br>
+      Parselmouth is released under the GNU General Public License, for details check <a href ="https://github.com/YannickJadoul/Parselmouth/blob/master/LICENSE" target="_blank"> License</a><br>
+      <a style="color: red; font-size: small;">This website records your voice.</a></p>
+    </div>
+  </footer>
+</html>

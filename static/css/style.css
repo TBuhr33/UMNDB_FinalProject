@@ -1,0 +1,90 @@
+html{
+    position: relative;
+    min-height: 80%;
+    /* overflow: scroll;
+    overflow-y: hidden */
+}
+
+.panel-body{
+    background-color: GhostWhite ;
+}
+
+h2{
+    font-style: bold;
+}
+
+.panel{
+    padding: 10px;
+    background-color: DarkSalmon ;
+
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.content, .outer-border { 
+    /* width: auto; 
+    height: auto;  */
+    text-align:justify; 
+    background-color:white; 
+    color:black; 
+    padding-left:15px; 
+    padding-right:15px; 
+    } 
+
+.outer-border { 
+    /* border: 2px solid black;  */
+    position: relative; 
+    /* overflow: hidden;  */
+    } 
+
+/* div.scroll {  */
+    /* margin:4px, 4px;  */
+    /* padding:4px;  */
+    /* background-color: green;  */
+    /* width: 1500px;  */
+    /* height: 518px;  */
+    /* overflow-x: hidden;  */
+    /* overflow-y: hidden; */
+    /* overflow-y: auto;   */
+    /* overflow-x: auto;  */
+    /* text-align:justify;  */
+    /* overflow: -moz-scrollbars-none; */
+    /* -ms-overflow-style: none; */
+/* }  */
+
+footer{
+    /* background-color: DarkOliveGreen ; */
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    /* border-top: 2px; */
+    border-top-color: brown ;
+    border-width: 2px;
+    border-top-style: solid;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 10px) {
+    .navbar {
+      background-color: rgb(12, 173, 167);
+  }
+
+    .navbar-brand {
+                   background-color: ;
+                   font-family: Lucida Console;
+                   font-weight: bold;
+                   color: rgb(12, 173, 167);
+  }
+
+    h2 {
+        font-size: 100%
+    }
+
+    h3 {
+        font-size: 100%
+    }
+}
